@@ -1,2 +1,82 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section class="intro">
+    <p class="small-title">public archive of forgotten internet memories</p>
+
+    <h1>Forgotten Internet</h1>
+
+    <p class="intro-text">
+         The internet moves fast, but some things stay
+         with you for years. This is a place for the internet memories that never fully faded, and the ones still living clearly in your mind that you want to archive forever.
+         forgotten usernames, deleted videos, abandoned profiles,
+         late-night scrolling, old game servers, conversations, friends, lovers
+         and other strange little corners of the web that still linger somewhere in
+         the back of your mind.
+             </p>
+
+</section>
+
+<section class="submit-section">
+    <h2>Leave Something Behind For Us to Keep</h2>
+
+    <form id="entryForm">
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Memory title"
+            required
+        >
+
+        <textarea
+            id="memory"
+            placeholder="What do you remember?"
+            required
+        ></textarea>
+
+    
+        <input
+            type="text"
+            id="year"
+            placeholder="Approximate year"
+        >
+
+        <input
+            type="text"
+            id="emotion"
+            placeholder="What feeling does this memory give you?"
+        >
+
+        <select id="clarity" required>
+            <option value="">How do you remember it?</option>
+            <option value="clearly">clearly</option>
+            <option value="fading">fading</option>
+            <option value="barely">barely</option>
+        </select>
+       <div class="submit-actions">
+
+    <label class="upload-label" for="image">
+        image upload
+    </label>
+
+    <input
+        type="file"
+        id="image"
+        name="image"
+        accept="image/*"
+    >
+
+    <button type="submit">
+        Leave It Here
+    </button>
+
+</div>
+
+    </form>
+</section>
+
+<section class="archive">
+    <h2>Archive</h2>
+
+    <div id="entriesContainer"></div>
+</section>
+
+<script src="/javascripts/script.js"></script>

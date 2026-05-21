@@ -1,1 +1,640 @@
-/* Your CSS goes here  */
+@import url('https://rsms.me/inter/inter.css');
+
+/* ===== GENERAL PAGE SETUP ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #E6E6E6;
+    color: #39393A;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 48px 64px;
+    overflow-x: hidden;
+}
+
+/* ===== INTRO SECTION ===== */
+
+.intro {
+    width: 43%;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.small-title {
+    color: #558B6E;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 96px;
+    line-height: 0.88;
+    letter-spacing: -7px;
+    text-transform: lowercase;
+    margin: 0;
+    color: #29335C;
+    font-weight: 700;
+}
+
+.intro-text {
+    margin-top: 42px;
+    color: #39393A;
+    line-height: 1.9;
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 650px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== SUBMISSION FORM SECTION ===== */
+
+.submit-section {
+    position: absolute;
+    top: 48px;
+    right: 64px;
+    width: 50%;
+}
+
+.submit-section h2 {
+    color: #29335C;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    font-weight: 500;
+    margin: 0 0 24px 0;
+}
+
+.submit-section h2::before {
+    content: "✦ ";
+    color: #B26E63;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: start;
+}
+
+#title,
+#memory,
+#clarity {
+    grid-column: span 2;
+}
+
+.upload-label,
+#year,
+#emotion {
+    width: 100%;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(41,51,92,0.12);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: #39393A;
+    font-family: "Inter", sans-serif;
+    outline: none;
+    box-shadow: 0 10px 24px rgba(57,57,58,0.08);
+    backdrop-filter: blur(10px);
+}
+
+textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #777777;
+}
+
+select {
+    color: #777777;
+}
+
+/* ===== GENERAL BUTTON STYLE ===== */
+
+button {
+    background: #29335C;
+    color: #E6E6E6;
+    border: none;
+    border-radius: 999px;
+    padding: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(57,57,58,0.18);
+}
+
+/* ===== FORM ACTION BUTTONS ===== */
+
+.submit-actions {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 4px;
+}
+
+.submit-actions button {
+    flex: 1;
+}
+
+.upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(178,110,99,0.18);
+    color: #B26E63;
+    border: 1px solid rgba(178,110,99,0.25);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    width: fit-content;
+}
+
+.upload-label:hover {
+    transform: translateY(-1px);
+    background: rgba(178,110,99,0.28);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* ===== ARCHIVE SECTION ===== */
+
+.archive {
+    margin-top: 220px;
+    clear: both;
+}
+
+.archive h2 {
+    color: #29335C;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    font-weight: 500;
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(41,51,92,0.12);
+    padding-top: 20px;
+}
+
+.archive h2::before {
+    content: "▭ ";
+    color: #B26E63;
+}
+
+/* ===== ARCHIVE STATS ===== */
+
+#archiveStats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#archiveStats p {
+    margin: 0;
+    color: #39393A;
+    font-size: 14px;
+}
+
+#archiveStats strong {
+    color: #29335C;
+    font-weight: 700;
+}
+
+#randomMemoryBtn {
+    background: rgba(178,110,99,0.18);
+    color: #B26E63;
+    border: 1px solid rgba(178,110,99,0.24);
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-size: 12px;
+    width: fit-content;
+    box-shadow: none;
+}
+
+#randomMemoryBtn:hover {
+    background: rgba(178,110,99,0.28);
+    transform: translateY(-1px);
+}
+
+/* ===== FILTER BUTTONS ===== */
+
+#filterBox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: transparent;
+    color: #29335C;
+    border: 1px solid rgba(41,51,92,0.14);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 12px;
+    width: fit-content;
+    box-shadow: none;
+}
+
+.filter-btn:hover {
+    background: rgba(85,139,110,0.14);
+    transform: translateY(-1px);
+}
+
+/* ===== MEMORY CARD GRID ===== */
+
+#entriesContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.memory-card {
+    background: rgba(255,255,255,0.62);
+    border: 1px solid rgba(41,51,92,0.10);
+    border-radius: 0;
+    padding: 24px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 14px 28px rgba(57,57,58,0.08);
+    transition: 0.25s;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 34px rgba(57,57,58,0.12);
+}
+
+.file-label {
+    color: #558B6E;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.memory-card h3 {
+    font-size: 34px;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin: 0 0 18px 0;
+    color: #29335C;
+    font-weight: 600;
+}
+
+.memory-card h3::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(41,51,92,0.12);
+    margin-top: 18px;
+}
+
+.memory-card p {
+    color: #39393A;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ===== MEMORY TEXT + MORE BUTTON ===== */
+
+.memory-text-wrap {
+    max-height: 90px;
+    overflow: hidden;
+    position: relative;
+}
+
+.memory-text-wrap.open {
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.more-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #558B6E;
+    padding: 0;
+    font-size: 10px;
+    margin-top: 10px;
+    width: fit-content;
+    box-shadow: none;
+}
+
+.more-btn:hover {
+    transform: none;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+/* ===== MEMORY IMAGES ===== */
+
+.memory-image {
+    display: block;
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 0;
+    margin-top: 16px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(41,51,92,0.10);
+    cursor: pointer;
+}
+
+/* ===== MEMORY TAG BUBBLES ===== */
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.bubble {
+    display: inline-block;
+    padding: 8px 13px;
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 1;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.year-bubble {
+    background: rgba(178,110,99,0.18);
+    color: #B26E63;
+}
+
+.emotion-bubble {
+    background: rgba(85,139,110,0.18);
+    color: #558B6E;
+}
+
+.clarity-bubble {
+    background: rgba(41,51,92,0.12);
+    color: #29335C;
+}
+
+/* ===== COMMENT BUTTON ON MEMORY CARD ===== */
+
+.comment-open-btn {
+    display: block;
+    margin: 18px auto 0 auto;
+    background: transparent;
+    color: #29335C;
+    border: none;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+    width: fit-content;
+    box-shadow: none;
+}
+
+.comment-open-btn strong {
+    font-weight: 800;
+}
+
+/* ===== POPUP BACKGROUND ===== */
+
+.image-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(230,230,230,0.72);
+    backdrop-filter: blur(18px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup-image-wrap,
+.popup-memory-wrap {
+    position: relative;
+}
+
+/* ===== IMAGE POPUP ===== */
+
+.popup-image-wrap img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 0;
+    box-shadow: 0 24px 60px rgba(57,57,58,0.22);
+}
+
+.close-popup {
+    position: absolute;
+    top: -42px;
+    left: calc(100% + 40px);
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    color: #39393A;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+/* ===== MEMORY POPUP ===== */
+
+.popup-memory-wrap {
+    max-width: 560px;
+    width: 90vw;
+}
+
+.popup-memory-card {
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(41,51,92,0.12);
+    border-radius: 0;
+    padding: 28px;
+    box-shadow: 0 24px 60px rgba(57,57,58,0.18);
+    overflow: visible;
+}
+
+.popup-memory-card h3 {
+    font-size: 38px;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin: 0 0 18px 0;
+    color: #29335C;
+}
+
+.popup-memory-text {
+    color: #39393A;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ===== COMMENTS INSIDE POPUP ===== */
+
+.comments-section {
+    margin-top: 22px;
+    border-top: 1px solid rgba(41,51,92,0.12);
+    padding-top: 16px;
+}
+
+.comment-form {
+    display: flex;
+    gap: 10px;
+}
+
+.comment-input {
+    flex: 1;
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(41,51,92,0.10);
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.comment-btn {
+    background: rgba(178,110,99,0.18);
+    color: #B26E63;
+    border: 1px solid rgba(178,110,99,0.24);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 12px;
+    width: auto;
+    box-shadow: none;
+}
+
+.comment-btn:hover {
+    background: rgba(178,110,99,0.28);
+}
+
+.comments-list {
+    margin-top: 18px;
+    max-height: 170px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.comment {
+    font-size: 12px;
+    color: #39393A;
+    margin: 10px 0 0 0;
+    background: rgba(255,255,255,0.45);
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.no-comments {
+    color: #777777;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* ===== TABLET RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1150px) {
+
+    body {
+        padding: 36px;
+    }
+
+    .intro,
+    .submit-section {
+        position: static;
+        width: 100%;
+    }
+
+    .submit-section {
+        margin-top: 48px;
+    }
+
+    h1 {
+        font-size: 72px;
+        letter-spacing: -5px;
+    }
+
+    .archive {
+        margin-top: 90px;
+    }
+
+    #entriesContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== MOBILE RESPONSIVE DESIGN ===== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 54px;
+        letter-spacing: -3px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    #title,
+    #memory,
+    #clarity,
+    .submit-actions {
+        grid-column: span 1;
+    }
+
+    .submit-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .upload-label {
+        width: fit-content;
+    }
+
+    #entriesContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .close-popup {
+        left: auto;
+        right: 0;
+        top: -42px;
+    }
+}
